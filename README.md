@@ -1,2 +1,2 @@
-# LLVMOufOfTreeTesting
-An example of how to test llvm code out of tree.
+# clang-query-msvc
+Using MSVC to compile clang-query.
