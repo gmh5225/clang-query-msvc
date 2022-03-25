@@ -15,12 +15,6 @@ add_definitions(${CLANG_DEFINITIONS})
 list(APPEND CMAKE_MODULE_PATH ${LLVM_CMAKE_DIR})
 include(AddLLVM)
 
-set(LLVM_LINK_COMPONENTS
-  lineeditor
-  support
-  FrontendOpenMP
-  )
-
 add_library(clangQuery
   Query.cpp
   QueryParser.cpp
@@ -35,6 +29,9 @@ target_link_libraries(clangQuery
   clangFrontend
   clangTooling
   clangSerialization
+  LLVMLineEditor
+  LLVMSupport
+  LLVMFrontendOpenMP
   )
 
 add_subdirectory(tool)
